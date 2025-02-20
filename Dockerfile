@@ -21,7 +21,7 @@ FROM nginx:alpine
 COPY --from=build /app/dist /usr/share/nginx/html
 
 # Открываем порт 80
-# EXPOSE 80
+EXPOSE 80
 
 # Запускаем Nginx для обслуживания статических файлов
 CMD ["nginx", "-g", "daemon off;"]
